@@ -1,0 +1,78 @@
+title: My Technology & Life - epicsagas' blog
+# Left sidebar name
+author_name: epicsagas
+
+# Left sidebar tags (only two)
+tag1: Music
+tag2: Anime
+
+# Left sidebar Github link
+github_url: https://github.com/Aizener
+
+# Left sidebar motto (two lines)
+motto_prev: "Code, Create, and Share"
+motto_last: "Building the future, one line at a time"
+
+# Site deployment date (for calculating running time)
+public_date: 2022-02-16
+
+# Left sidebar menu
+menu:
+  - [Home, '/', 'icon-shouye']
+  - [Log, '/log', 'icon-rizhi']
+  - [Friends, '/link', 'icon-youqinglianjie']
+  - ['About', '/about', 'icon-guanyuwomen']
+  - ['Tools', '/tools', 'icon-gongju']
+
+# Friends links: [avatar, name, link]
+links:
+ - ['https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg', 'Hexo.', 'https://hexo.io/']
+
+# Right sidebar notice
+notice: Hello~ Welcome to my blog! I hope you can find something useful here!
+
+# Right sidebar music list: [title, artist, link, cover]
+musics:
+  - ['Blooming Quiet', 'epicsagas', 'https://epicsagas.github.io/music/blooming_quiet.mp3', 'https://epicsagas.github.io/imgs/thumbnails/blooming_quiet.jpg']
+  - ['Daydream Canvas', 'epicsagas', 'https://epicsagas.github.io/music/daydream_canvas.mp3', 'https://epicsagas.github.io/imgs/thumbnails/daydream_canvas.jpg']
+  - ['Flowing Softly', 'epicsagas', 'https://epicsagas.github.io/music/flowing_softly.mp3', 'https://epicsagas.github.io/imgs/thumbnails/flowing_softly.jpg']
+  - ['Warm Sketch', 'epicsagas', 'https://epicsagas.github.io/music/warm_sketch.mp3', 'https://epicsagas.github.io/imgs/thumbnails/warm_sketch.jpg']
+
+# Personal introduction
+likes:
+  - Name: epicsagas
+  - Gender: ♂
+  - Hometown: Seoul
+  - Current Location: Seoul
+  - Occupation: Software Engineer
+  - Hobbies: Music, Anime, Gaming
+
+# Tools configuration: [cover, title, intro, link]
+tools:
+  # - ['https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/30e94204580a4dbd83a64d4f91a9a6e5~tplv-k3u1fbpfcp-no-mark:240:240:240:160.awebp?', 'PNG Image Compressor', 'An online tool for lossless PNG image compression, you can upload or drag to batch compress images and download', 'http://1.14.43.39:5000/']
+  - ['https://coke-cola.gitee.io/resume-page/assets/dark-f439b888.jpeg', 'Online Resume Generator', 'A free online resume generation tool', 'https://coke-cola.gitee.io/resume-page/#/']
+
+# Right sidebar site information
+copyright: © 2024 All rights reserved.
+
+
+# Enable article comments Valine:https://valine.js.org/configuration.htm
+comments:
+  enable: true
+  appId: 'Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz'
+  appKey: 'qOqoiUHhH1TGtLRUYURkLRQX'
+  placeholder: 'Please leave your valuable comments~'
+  lang: 'en'
+  meta: ['nick']
+  recordIP: true
+  visitor: true
+  enableQQ: true
+
+# Memorial mode none: not set all: all gray index: home page gray
+gray: none
+
+# Hide log content after exceeding 1000 characters (max height 1000px), 1000 can be any value
+log_text_num: 1000
+
+# Version
+version: 1.0.2
