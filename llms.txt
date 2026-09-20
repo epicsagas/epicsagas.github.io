@@ -12,7 +12,7 @@
 ## Research sites (sub-pages)
 
 - [The Ontology Lineage](https://epicsagas.github.io/ontology-explorer/en/): 2,300 years of ontology research on one static page — lineage timeline, integrated architecture, five-stage learning route, browser for 425 papers (ko/en). LLM export: /ontology-explorer/llms-full.txt
-- [The Uncanny Valley of AI Writing](https://epicsagas.github.io/uncanny-writing/): fact-checked dossier on why readers turn away from AI-generated text — 5 sources verified, 86 papers indexed, 4 open gaps (ko/en). LLM export: /uncanny-writing/llms-full.txt
+- [The Uncanny Valley of AI Writing](https://epicsagas.github.io/uncanny-writing/?lang=en): fact-checked dossier on why readers turn away from AI-generated text — 5 sources verified, 86 papers indexed, 4 open gaps (ko/en). LLM export: /uncanny-writing/llms-full.txt
 
 ## Featured projects
 
