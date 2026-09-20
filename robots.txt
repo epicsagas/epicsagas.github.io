@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://epicsagas.github.io/sitemap.xml

@@ -1,0 +1,13 @@
+# epicsagas.github.io
+
+> Research sites and agent tooling by epicsagas. Two long-form research dossiers published as static pages, plus the CLI/MCP tool that builds them.
+
+## Sites
+
+- [The Ontology Lineage (English)](https://epicsagas.github.io/ontology-explorer/en/): 2,300 years of ontology research on one static page — lineage timeline, integrated architecture, five-stage learning route, browser for all 425 papers. LLM text export at /ontology-explorer/en/llms-full.txt
+- [The Ontology Lineage (한국어)](https://epicsagas.github.io/ontology-explorer/): 한국어판. LLM text export at /ontology-explorer/llms-full.txt
+- [The Uncanny Valley of AI Writing](https://epicsagas.github.io/uncanny-writing/): fact-checked dossier on reader aversion to AI-generated text — 5 sources verified, 86 papers indexed, four open gaps. Korean/English toggle. LLM text export at /uncanny-writing/llms-full.txt
+
+## Tooling
+
+- [research-agent](https://github.com/epicsagas/research-agent): research memory for AI agents — index arXiv/OpenAlex papers into SQLite, find coverage gaps, file survey reports. Rust CLI + 18-tool MCP server.
