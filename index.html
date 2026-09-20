@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>epic (epicsagas) — Platform &amp; Infra Engineer, AI-native tooling</title>
-<meta name="description" content="epic — Platform & Infra engineer in Seoul. Building AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines. Background in commerce, regulated fintech, crypto, and security on AWS/GCP.">
+<meta name="description" content="epic — Platform & Infra engineer. Building AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines. Background in commerce, regulated fintech, crypto, and security on AWS/GCP.">
 <link rel="canonical" href="https://epicsagas.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="epicsagas.github.io">
 <meta property="og:title" content="epic (epicsagas) — Platform &amp; Infra Engineer">
-<meta property="og:description" content="AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines. Seoul.">
+<meta property="og:description" content="AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines.">
 <meta property="og:url" content="https://epicsagas.github.io/">
-<meta property="og:locale" content="ko_KR">
-<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="epic (epicsagas) — Platform &amp; Infra Engineer">
 <meta name="twitter:description" content="AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <!-- Google tag (gtag.js) G-XGTVVMP526 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTVVMP526"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XGTVVMP526');</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"epic","alternateName":"epicsagas",
-"jobTitle":"Platform & Infra Engineer","address":{"@type":"PostalAddress","addressLocality":"Seoul","addressCountry":"KR"},
+"jobTitle":"Platform & Infra Engineer",
 "url":"https://epicsagas.github.io/","sameAs":["https://github.com/epicsagas","https://epiccounty.com"],
 "knowsAbout":["Rust","Go","Flutter","Svelte","MCP","AI agents","fintech","AWS","GCP"]}
 </script>
@@ -34,16 +33,14 @@
     --blue:#7aa2f7; --purple:#bb9af7; --yellow:#e0af68; --red:#f7768e; --teal:#73daca;
     --line:#2a2e42;
     --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
-    --sans:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo',sans-serif;
+    --sans:-apple-system,'Helvetica Neue','Segoe UI',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.8}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.75}
   a{color:var(--blue);text-decoration:none}
   a:hover{text-decoration:underline}
   .wrap{max-width:920px;margin:0 auto;padding:0 24px}
-  .mono{font-family:var(--mono)}
 
-  /* hero */
   header{padding:88px 0 56px;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%);border-bottom:1px solid var(--line)}
   .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--purple);text-transform:uppercase}
   h1{font-size:clamp(36px,6vw,54px);font-weight:800;margin:14px 0 4px;color:#fff}
@@ -61,7 +58,6 @@
   h2{font-family:var(--mono);font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
   h2 b{color:#fff}
 
-  /* about front */
   .about{display:grid;grid-template-columns:1.4fr 1fr;gap:36px}
   .about p{color:var(--fg2);font-size:16.5px;margin-bottom:14px}
   .about p b{color:var(--fg)}
@@ -69,7 +65,6 @@
   .fact .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
   .fact .v{font-size:15px;color:var(--fg);margin-top:4px}
 
-  /* cards */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
   .card{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:20px 22px;display:block;color:inherit;transition:border-color .15s, transform .15s}
   .card:hover{border-color:var(--blue);text-decoration:none;transform:translateY(-2px)}
@@ -100,7 +95,7 @@
     <div class="kicker">epicsagas.github.io</div>
     <h1>epic<span class="han">epicsagas</span></h1>
     <div class="typing" id="ty"></div>
-    <p class="biorow">서울의 플랫폼·인프라 엔지니어. 요즘은 <b style="color:var(--fg)">Rust로 AI 네이티브 개발자 도구</b>를 만든다 — MCP 서버, 에이전트 하니스, 리서치 파이프라인. 논문을 수집하고, 팩트체크하고, 정적 페이지로 발행하는 것까지가 한 파이프라인.</p>
+    <p class="biorow">Platform and infrastructure engineer. These days I build <b style="color:var(--fg)">AI-native developer tooling in Rust</b> — MCP servers, agent harnesses, research pipelines. Papers go in; indexed, fact-checked dossiers come out, published as static pages.</p>
     <div class="pillrow">
       <span class="pill b">Rust</span><span class="pill">Go</span><span class="pill">Flutter</span><span class="pill">Svelte</span>
       <span class="pill p">MCP</span><span class="pill p">Agent Harness</span>
@@ -113,15 +108,14 @@
 <main class="wrap">
 
 <section id="about">
-  <h2><b>About</b> — 전면</h2>
+  <h2><b>About</b></h2>
   <div class="about">
     <div>
-      <p><b>만드는 것:</b> AI 코딩 에이전트가 실제 일을 하게 만드는 인프라. 문서 검색(<b>alcove</b>), 논문 리서치(<b>research-agent</b>), 에이전트 실행 하니스(<b>epic-harness</b>), 책 출판(<b>Velith</b>)까지 — 각 도구는 CLI와 MCP 서버로 동시에 동작하고, Claude Code·Codex·Cursor 같은 5개 이상의 에이전트 호스트에서 플러그인으로 설치된다.</p>
-      <p><b>방식:</b> 단일 Rust 바이너리, SQLite + FTS5, 정적 사이트. 빌드 스텝과 백엔드 없이 배포되는 것을 선호한다. 리서치는 수집 → 갭 분석 → 팩트체크 → 발행까지 추적 가능한 파이프라인으로 운영하고, 그 결과물이 아래 Research Sites다.</p>
-      <p><b>이전 경력:</b> 커머스, 규제 핀테크, 크립토, 보안 — AWS/GCP 위에서 결제·정산·보안 시스템을 운영했다. 그때의 습관이 지금 도구 설계에 남아 있다. 신뢰 경계 명시, 실패 시 되돌릴 수 있는 구조, 규정 준수 로그.</p>
+      <p><b>What I build:</b> infrastructure that makes AI coding agents actually do work. Document retrieval (<b>alcove</b>), paper research (<b>research-agent</b>), agent execution harness (<b>epic-harness</b>), book publishing (<b>Velith</b>) — each tool runs as both a CLI and an MCP server, and installs as a plugin on five or more agent hosts.</p>
+      <p><b>How I build:</b> single Rust binaries, SQLite with FTS5, static sites. I prefer things that deploy with no build step and no backend. Research runs as a trackable pipeline — collect, gap-analyze, fact-check, publish — and its outputs are the Research Sites below.</p>
+      <p><b>Before this:</b> commerce, regulated fintech, crypto, and security — payment, settlement, and security systems on AWS/GCP. Habits from that era still shape how I design tools: explicit trust boundaries, structures you can roll back when they fail, compliance logs.</p>
     </div>
     <div>
-      <div class="fact"><div class="k">Location</div><div class="v">Seoul, Korea</div></div>
       <div class="fact"><div class="k">Focus 2026</div><div class="v">AI-native developer tooling · MCP · agent infrastructure</div></div>
       <div class="fact"><div class="k">Languages</div><div class="v">Rust · Go · TypeScript · Flutter/Dart · Svelte</div></div>
       <div class="fact"><div class="k">Shipping</div><div class="v">crates.io · Homebrew tap · 5-host agent plugins</div></div>
@@ -131,16 +125,16 @@
 </section>
 
 <section id="sites">
-  <h2><b>Research Sites</b> — 서브페이지</h2>
+  <h2><b>Research Sites</b></h2>
   <div class="grid">
     <a class="card wide" href="https://epicsagas.github.io/ontology-explorer/en/">
       <h3>The Ontology Lineage <span class="tag">ko/en</span></h3>
-      <p>2,300년 온톨로지 연구를 한 정적 페이지로: 아리스토텔레스에서 온톨로지 제약 LLM까지 계보 타임라인, 이론 기초, GraphRAG·지식 엔진 종합, 통합 참조 아키텍처, 5단계 학습 루트, 425편 전체 브라우저. research-agent로 수집·갭 분석 — 초기 조사에서 9개 갭을 찾고 후속 수집으로 8개를 닫았다.</p>
+      <p>2,300 years of ontology research on one static page: a lineage timeline from Aristotle to ontology-constrained LLMs, theoretical foundations, GraphRAG and knowledge-engine synthesis, an integrated reference architecture, a five-stage learning route, and a browser for all 425 papers. Collected and gap-analyzed with research-agent — the survey logged 9 gaps, a follow-up collection closed 8.</p>
       <span class="go">epicsagas.github.io/ontology-explorer →</span>
     </a>
     <a class="card wide" href="https://epicsagas.github.io/uncanny-writing/">
       <h3>The Uncanny Valley of AI Writing <span class="tag">ko/en</span></h3>
-      <p>독자는 왜 AI가 쓴 글에서 이탈하는가 — 팩트체크 조사 보고서. 인용 소스 5건 전수 검증(2건 교정), arXiv·OpenAlex 86편 인덱싱, 7개 주제별 증거 지도, 반대 증거, 미해결 갭 4건. "독자는 텍스트가 아니라 라벨과 얕은 휴리스틱으로 판단한다"가 핵심 반전.</p>
+      <p>Why readers turn away from AI-generated text — a fact-checked dossier. All 5 cited sources verified (2 corrected), 86 papers indexed from arXiv and OpenAlex, an evidence map across 7 themes, counter-evidence in full, and 4 open gaps. The twist: readers judge provenance labels and shallow heuristics, not the text itself.</p>
       <span class="go">epicsagas.github.io/uncanny-writing →</span>
     </a>
   </div>
@@ -151,32 +145,32 @@
   <div class="grid">
     <a class="card" href="https://github.com/epicsagas/research-agent">
       <h3>research-agent <span class="tag">rust</span></h3>
-      <p>AI 에이전트의 리서치 메모리. arXiv/OpenAlex 논문을 SQLite에 인덱싱하고 LLM 갭 분석으로 빈 곳을 찾아 survey 보고서를 낸다. Rust CLI + 18개 MCP 도구, 5개 호스트 플러그인.</p>
+      <p>Research memory for AI agents. Indexes arXiv/OpenAlex papers into SQLite, finds coverage gaps with LLM analysis, files survey reports. Rust CLI + 18-tool MCP server.</p>
       <span class="go">GitHub →</span>
     </a>
     <a class="card" href="https://github.com/epicsagas/epic-harness">
       <h3>epic-harness <span class="tag">rust</span></h3>
-      <p>멀티 툴 AI 에이전트 하니스 — 22개 스킬, 자기 진화 엔진, 통합 메모리, spec-to-PR 자동 파이프라인.</p>
+      <p>Multi-tool AI agent harness — 22 skills, self-evolving engine, unified memory, autonomous spec-to-PR pipeline.</p>
       <span class="go">GitHub →</span>
     </a>
     <a class="card" href="https://github.com/epicsagas/alcove">
       <h3>alcove <span class="tag">rust</span></h3>
-      <p>AI 에이전트용 비공개 문서 서버 — BM25+벡터 하이브리드 검색, tree-sitter 코드 인덱싱, 문서 일관성 정책.</p>
+      <p>MCP doc server for AI agents — BM25 + vector hybrid search over private docs, tree-sitter code indexing, doc-consistency policy.</p>
       <span class="go">GitHub →</span>
     </a>
     <a class="card" href="https://github.com/epicsagas/Velith">
       <h3>Velith <span class="tag">plugin</span></h3>
-      <p>AI 네이티브 출판 시스템 — 빈 페이지에서 EPUB/PDF까지 6단계 파이프라인, 16 스킬·7 에이전트·8 장르 템플릿.</p>
+      <p>AI-native publishing system — build books like software. A 6-phase pipeline from blank page to EPUB/PDF, with 16 skills, 7 agents, 8 genre templates.</p>
       <span class="go">GitHub →</span>
     </a>
     <a class="card" href="https://github.com/epicsagas/llm-kernel">
       <h3>llm-kernel <span class="tag">rust</span></h3>
-      <p>AI 네이티브 앱용 Rust 기반 라이브러리 — 16 프로바이더 카탈로그, LLM 클라이언트, MCP 서버, ONNX 임베딩 44종.</p>
+      <p>Rust foundation library for AI-native apps — 16-provider catalog, LLM client, MCP server, 44 local ONNX embedding models.</p>
       <span class="go">GitHub →</span>
     </a>
     <a class="card" href="https://github.com/epicsagas/opencodex">
       <h3>opencodex <span class="tag">cli</span></h3>
-      <p>OpenAI Codex와 Claude Code용 범용 프로바이더 프록시 — Claude, Gemini, Grok, DeepSeek, Ollama를 한 CLI 뒤에.</p>
+      <p>Universal provider proxy for OpenAI Codex and Claude Code — Claude, Gemini, Grok, DeepSeek, Ollama behind one CLI.</p>
       <span class="go">GitHub →</span>
     </a>
   </div>
@@ -185,13 +179,13 @@
 <section id="tools">
   <h2><b>More Tools</b></h2>
   <ul class="tools">
-    <li><b><a href="https://github.com/epicsagas/Episteme">Episteme</a></b> — 소프트웨어 엔지니어링 지식 그래프(패턴·법칙·스멜)</li>
-    <li><b><a href="https://github.com/epicsagas/claudy">claudy</a></b> — 멀티 프로바이더 AI 런처</li>
-    <li><b><a href="https://github.com/epicsagas/llm-transpile">llm-transpile</a></b> — 토큰 예산 적응 압축 문서 변환기</li>
-    <li><b><a href="https://github.com/epicsagas/obsidian-forge">obsidian-forge</a></b> — Obsidian 볼트 생성·자동화·그래프 강화</li>
-    <li><b><a href="https://github.com/epicsagas/plugins">plugins</a></b> — Claude Code 플러그인 마켓플레이스</li>
-    <li><b><a href="https://github.com/epicsagas/homebrew-tap">homebrew-tap</a></b> — 위 CLI 도구들 Homebrew 설치</li>
-    <li><b><a href="https://github.com/epicsagas/epicsagas/blob/master/skills/README.md">Agent Skills</a></b> — 문제 발견·인지 자기분석·교정 루틴 스킬 카탈로그</li>
+    <li><b><a href="https://github.com/epicsagas/Episteme">Episteme</a></b> — software engineering knowledge graph: patterns, laws, smells</li>
+    <li><b><a href="https://github.com/epicsagas/claudy">claudy</a></b> — multi-provider AI launcher</li>
+    <li><b><a href="https://github.com/epicsagas/llm-transpile">llm-transpile</a></b> — token-budget adaptive document transpiler</li>
+    <li><b><a href="https://github.com/epicsagas/obsidian-forge">obsidian-forge</a></b> — Obsidian vault generator, automation, graph strengthener</li>
+    <li><b><a href="https://github.com/epicsagas/plugins">plugins</a></b> — Claude Code plugin marketplace</li>
+    <li><b><a href="https://github.com/epicsagas/homebrew-tap">homebrew-tap</a></b> — Homebrew installs for the CLIs above</li>
+    <li><b><a href="https://github.com/epicsagas/epicsagas/blob/master/skills/README.md">Agent Skills</a></b> — problem discovery, cognitive self-analysis, corrective routines</li>
   </ul>
 </section>
 
@@ -204,13 +198,13 @@
       <a class="linkbtn" href="https://epiccounty.com">epiccounty.com</a>
       <a class="linkbtn" href="https://epicsagas.github.io/llms.txt">llms.txt</a>
     </div>
-    © 2026 epic (epicsagas) — static page, no build step, no tracking beyond GA4
+    © 2026 epic (epicsagas) — static page, no build step
   </div>
 </footer>
 
 <script>
 const LINES = [
-  "Platform & Infra Engineer — Seoul",
+  "Platform & Infra Engineer",
   "AI-native developer tooling in Rust",
   "MCP servers · agent harnesses · research pipelines",
   "papers in → fact-checked dossiers out"

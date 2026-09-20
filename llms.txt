@@ -1,6 +1,6 @@
 # epicsagas.github.io
 
-> Portfolio hub of epic (epicsagas) — Platform & Infra engineer in Seoul building AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines. Former commerce / regulated fintech / crypto / security engineer on AWS/GCP.
+> Portfolio hub of epic (epicsagas) — Platform & Infra engineer building AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines. Former commerce / regulated fintech / crypto / security engineer on AWS/GCP.
 
 ## Profile
 
