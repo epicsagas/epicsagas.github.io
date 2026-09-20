@@ -1,13 +1,32 @@
 # epicsagas.github.io
 
-> Research sites and agent tooling by epicsagas. Two long-form research dossiers published as static pages, plus the CLI/MCP tool that builds them.
+> Portfolio hub of epic (epicsagas) — Platform & Infra engineer in Seoul building AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines. Former commerce / regulated fintech / crypto / security engineer on AWS/GCP.
 
-## Sites
+## Profile
 
-- [The Ontology Lineage (English)](https://epicsagas.github.io/ontology-explorer/en/): 2,300 years of ontology research on one static page — lineage timeline, integrated architecture, five-stage learning route, browser for all 425 papers. LLM text export at /ontology-explorer/en/llms-full.txt
-- [The Ontology Lineage (한국어)](https://epicsagas.github.io/ontology-explorer/): 한국어판. LLM text export at /ontology-explorer/llms-full.txt
-- [The Uncanny Valley of AI Writing](https://epicsagas.github.io/uncanny-writing/): fact-checked dossier on reader aversion to AI-generated text — 5 sources verified, 86 papers indexed, four open gaps. Korean/English toggle. LLM text export at /uncanny-writing/llms-full.txt
+- Focus: AI-native developer tooling — every tool ships as both a CLI and an MCP server, installable as plugins on 5+ agent hosts (Claude Code, Codex, Cursor, OpenCode, Cline)
+- Languages: Rust, Go, TypeScript, Flutter/Dart, Svelte
+- Method: single Rust binaries, SQLite + FTS5, static sites, no build step
+- The full profile and contribution history live at github.com/epicsagas
 
-## Tooling
+## Research sites (sub-pages)
 
-- [research-agent](https://github.com/epicsagas/research-agent): research memory for AI agents — index arXiv/OpenAlex papers into SQLite, find coverage gaps, file survey reports. Rust CLI + 18-tool MCP server.
+- [The Ontology Lineage](https://epicsagas.github.io/ontology-explorer/en/): 2,300 years of ontology research on one static page — lineage timeline, integrated architecture, five-stage learning route, browser for 425 papers (ko/en). LLM export: /ontology-explorer/llms-full.txt
+- [The Uncanny Valley of AI Writing](https://epicsagas.github.io/uncanny-writing/): fact-checked dossier on why readers turn away from AI-generated text — 5 sources verified, 86 papers indexed, 4 open gaps (ko/en). LLM export: /uncanny-writing/llms-full.txt
+
+## Featured projects
+
+- [research-agent](https://github.com/epicsagas/research-agent): research memory for AI agents — arXiv/OpenAlex to SQLite, LLM gap analysis, survey reports (Rust CLI + 18-tool MCP server)
+- [epic-harness](https://github.com/epicsagas/epic-harness): multi-tool AI agent harness — 22 skills, self-evolving engine, spec-to-PR pipeline
+- [alcove](https://github.com/epicsagas/alcove): MCP doc server — BM25 + vector hybrid search, tree-sitter code indexing
+- [Velith](https://github.com/epicsagas/Velith): AI-native publishing — 6-phase book pipeline to EPUB/PDF
+- [llm-kernel](https://github.com/epicsagas/llm-kernel): Rust foundation library — provider catalog, MCP server, ONNX embeddings
+- [opencodex](https://github.com/epicsagas/opencodex): universal provider proxy for OpenAI Codex and Claude Code
+
+## More tools
+
+- [Episteme](https://github.com/epicsagas/Episteme) (SE knowledge graph), [claudy](https://github.com/epicsagas/claudy) (multi-provider launcher), [llm-transpile](https://github.com/epicsagas/llm-transpile) (token-budget transpiler), [obsidian-forge](https://github.com/epicsagas/obsidian-forge) (vault automation), [plugins](https://github.com/epicsagas/plugins) (marketplace), [homebrew-tap](https://github.com/epicsagas/homebrew-tap)
+
+## Elsewhere
+
+- [GitHub profile](https://github.com/epicsagas) - [epiccounty.com](https://epiccounty.com)

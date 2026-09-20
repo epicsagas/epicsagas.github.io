@@ -1,66 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>epicsagas — research tools &amp; sites</title>
-<meta name="description" content="Research sites and agent tooling by epicsagas: The Ontology Lineage (425-paper ontology survey), The Uncanny Valley of AI Writing (fact-checked dossier on reader aversion), and research-agent, the CLI/MCP that builds them.">
+<title>epic (epicsagas) — Platform &amp; Infra Engineer, AI-native tooling</title>
+<meta name="description" content="epic — Platform & Infra engineer in Seoul. Building AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines. Background in commerce, regulated fintech, crypto, and security on AWS/GCP.">
 <link rel="canonical" href="https://epicsagas.github.io/">
-<meta property="og:type" content="website">
+<meta property="og:type" content="profile">
 <meta property="og:site_name" content="epicsagas.github.io">
-<meta property="og:title" content="epicsagas — research tools &amp; sites">
-<meta property="og:description" content="Research sites and agent tooling: ontology lineage survey, AI-writing dossier, research-agent CLI/MCP.">
+<meta property="og:title" content="epic (epicsagas) — Platform &amp; Infra Engineer">
+<meta property="og:description" content="AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines. Seoul.">
 <meta property="og:url" content="https://epicsagas.github.io/">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="epicsagas — research tools &amp; sites">
-<meta name="twitter:description" content="Research sites and agent tooling: ontology lineage survey, AI-writing dossier, research-agent CLI/MCP.">
+<meta name="twitter:title" content="epic (epicsagas) — Platform &amp; Infra Engineer">
+<meta name="twitter:description" content="AI-native developer tooling in Rust: MCP servers, agent harnesses, research pipelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <!-- Google tag (gtag.js) G-XGTVVMP526 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGTVVMP526"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XGTVVMP526');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"epic","alternateName":"epicsagas",
+"jobTitle":"Platform & Infra Engineer","address":{"@type":"PostalAddress","addressLocality":"Seoul","addressCountry":"KR"},
+"url":"https://epicsagas.github.io/","sameAs":["https://github.com/epicsagas","https://epiccounty.com"],
+"knowsAbout":["Rust","Go","Flutter","Svelte","MCP","AI agents","fintech","AWS","GCP"]}
+</script>
 <style>
-  :root{--paper:#f7f3ec;--ink:#211d17;--ink2:#57503f;--muted:#8b8270;--line:#d9d0bf;--crimson:#a83224;--serif:"Iowan Old Style",Palatino,Georgia,serif;--mono:ui-monospace,Menlo,monospace}
+  :root{
+    --bg:#16161e; --bg2:#1a1b27; --panel:#1f2233; --panel2:#24283b;
+    --fg:#c0caf5; --fg2:#9aa5ce; --muted:#565f89;
+    --blue:#7aa2f7; --purple:#bb9af7; --yellow:#e0af68; --red:#f7768e; --teal:#73daca;
+    --line:#2a2e42;
+    --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+    --sans:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo',sans-serif;
+  }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.7}
-  .wrap{max-width:720px;margin:0 auto;padding:72px 28px}
-  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--crimson)}
-  h1{font-size:40px;margin:14px 0 8px}
-  .sub{color:var(--ink2);max-width:560px;margin-bottom:44px}
-  .card{border:1px solid var(--line);background:#fbf8f2;border-radius:4px;padding:22px 26px;margin-bottom:16px;display:block;text-decoration:none;color:inherit}
-  .card:hover{border-color:var(--crimson)}
-  .card h2{font-size:20px;margin-bottom:6px}
-  .card p{font-size:14.5px;color:var(--ink2)}
-  .card .lang{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
-  footer{margin-top:44px;font-size:13px;color:var(--muted)}
-  footer a{color:var(--muted)}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.8}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+  .mono{font-family:var(--mono)}
+
+  /* hero */
+  header{padding:88px 0 56px;background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%);border-bottom:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--purple);text-transform:uppercase}
+  h1{font-size:clamp(36px,6vw,54px);font-weight:800;margin:14px 0 4px;color:#fff}
+  h1 .han{color:var(--muted);font-weight:400;font-size:.5em;margin-left:12px}
+  .typing{font-family:var(--mono);font-size:clamp(15px,2.4vw,19px);color:var(--yellow);min-height:1.6em;margin:8px 0 18px}
+  .typing::after{content:"▍";animation:blink 1s steps(1) infinite;color:var(--blue)}
+  @keyframes blink{50%{opacity:0}}
+  .biorow{color:var(--fg2);max-width:680px}
+  .pillrow{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+  .pill{font-family:var(--mono);font-size:12px;padding:4px 12px;border:1px solid var(--line);border-radius:99px;color:var(--fg2);background:var(--panel)}
+  .pill.b{border-color:#33415e;color:var(--blue)}
+  .pill.p{color:var(--purple)} .pill.y{color:var(--yellow)} .pill.t{color:var(--teal)}
+
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--mono);font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+  h2 b{color:#fff}
+
+  /* about front */
+  .about{display:grid;grid-template-columns:1.4fr 1fr;gap:36px}
+  .about p{color:var(--fg2);font-size:16.5px;margin-bottom:14px}
+  .about p b{color:var(--fg)}
+  .fact{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:18px 20px;margin-bottom:12px}
+  .fact .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .fact .v{font-size:15px;color:var(--fg);margin-top:4px}
+
+  /* cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  .card{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:20px 22px;display:block;color:inherit;transition:border-color .15s, transform .15s}
+  .card:hover{border-color:var(--blue);text-decoration:none;transform:translateY(-2px)}
+  .card h3{font-size:17px;font-weight:600;color:#fff;margin-bottom:6px}
+  .card h3 .tag{font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.08em;color:var(--yellow);margin-left:8px;text-transform:uppercase}
+  .card p{font-size:13.5px;color:var(--fg2);line-height:1.65}
+  .card .go{font-family:var(--mono);font-size:11.5px;color:var(--blue);display:inline-block;margin-top:10px}
+  .card.wide{grid-column:1/-1;background:linear-gradient(135deg,var(--panel) 0%,var(--panel2) 100%)}
+  .card.wide h3{font-size:19px}
+
+  ul.tools{list-style:none;columns:2;gap:32px}
+  ul.tools li{padding:7px 0;font-size:14.5px;color:var(--fg2);break-inside:avoid}
+  ul.tools b{color:var(--fg);font-weight:600}
+
+  footer{padding:40px 0 64px;color:var(--muted);font-size:13.5px}
+  footer a{color:var(--fg2)}
+  .linkrow{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+  .linkbtn{font-family:var(--mono);font-size:12.5px;padding:8px 16px;border:1px solid var(--line);border-radius:8px;color:var(--fg);background:var(--panel)}
+  .linkbtn:hover{border-color:var(--blue);text-decoration:none;color:var(--blue)}
+
+  @media(max-width:760px){.about{grid-template-columns:1fr}ul.tools{columns:1}header{padding-top:64px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="kicker">epicsagas.github.io</div>
-  <h1>Research tools &amp; sites</h1>
-  <p class="sub">Long-form research dossiers and the agent tooling that builds them — papers indexed, fact-checked, and shipped as static pages.</p>
 
-  <a class="card" href="https://epicsagas.github.io/ontology-explorer/en/">
-    <h2>The Ontology Lineage</h2>
-    <p>2,300 years of ontology research on one static page: lineage timeline, integrated architecture, five-stage learning route, and a browser for all 425 papers.</p>
-    <span class="lang">English · 한국어</span>
-  </a>
+<header>
+  <div class="wrap">
+    <div class="kicker">epicsagas.github.io</div>
+    <h1>epic<span class="han">epicsagas</span></h1>
+    <div class="typing" id="ty"></div>
+    <p class="biorow">서울의 플랫폼·인프라 엔지니어. 요즘은 <b style="color:var(--fg)">Rust로 AI 네이티브 개발자 도구</b>를 만든다 — MCP 서버, 에이전트 하니스, 리서치 파이프라인. 논문을 수집하고, 팩트체크하고, 정적 페이지로 발행하는 것까지가 한 파이프라인.</p>
+    <div class="pillrow">
+      <span class="pill b">Rust</span><span class="pill">Go</span><span class="pill">Flutter</span><span class="pill">Svelte</span>
+      <span class="pill p">MCP</span><span class="pill p">Agent Harness</span>
+      <span class="pill y">AWS</span><span class="pill y">GCP</span>
+      <span class="pill t">Commerce</span><span class="pill t">Regulated Fintech</span><span class="pill t">Crypto</span><span class="pill t">Security</span>
+    </div>
+  </div>
+</header>
 
-  <a class="card" href="https://epicsagas.github.io/uncanny-writing/">
-    <h2>The Uncanny Valley of AI Writing</h2>
-    <p>Why readers turn away from AI-generated text. Five cited sources verified, 86 papers indexed, an evidence map, and four open research gaps.</p>
-    <span class="lang">한국어 · English</span>
-  </a>
+<main class="wrap">
 
-  <a class="card" href="https://github.com/epicsagas/research-agent">
-    <h2>research-agent</h2>
-    <p>Research memory for AI agents: index arXiv/OpenAlex papers into SQLite, find coverage gaps, file survey reports. Rust CLI + 18-tool MCP server.</p>
-    <span class="lang">GitHub</span>
-  </a>
+<section id="about">
+  <h2><b>About</b> — 전면</h2>
+  <div class="about">
+    <div>
+      <p><b>만드는 것:</b> AI 코딩 에이전트가 실제 일을 하게 만드는 인프라. 문서 검색(<b>alcove</b>), 논문 리서치(<b>research-agent</b>), 에이전트 실행 하니스(<b>epic-harness</b>), 책 출판(<b>Velith</b>)까지 — 각 도구는 CLI와 MCP 서버로 동시에 동작하고, Claude Code·Codex·Cursor 같은 5개 이상의 에이전트 호스트에서 플러그인으로 설치된다.</p>
+      <p><b>방식:</b> 단일 Rust 바이너리, SQLite + FTS5, 정적 사이트. 빌드 스텝과 백엔드 없이 배포되는 것을 선호한다. 리서치는 수집 → 갭 분석 → 팩트체크 → 발행까지 추적 가능한 파이프라인으로 운영하고, 그 결과물이 아래 Research Sites다.</p>
+      <p><b>이전 경력:</b> 커머스, 규제 핀테크, 크립토, 보안 — AWS/GCP 위에서 결제·정산·보안 시스템을 운영했다. 그때의 습관이 지금 도구 설계에 남아 있다. 신뢰 경계 명시, 실패 시 되돌릴 수 있는 구조, 규정 준수 로그.</p>
+    </div>
+    <div>
+      <div class="fact"><div class="k">Location</div><div class="v">Seoul, Korea</div></div>
+      <div class="fact"><div class="k">Focus 2026</div><div class="v">AI-native developer tooling · MCP · agent infrastructure</div></div>
+      <div class="fact"><div class="k">Languages</div><div class="v">Rust · Go · TypeScript · Flutter/Dart · Svelte</div></div>
+      <div class="fact"><div class="k">Shipping</div><div class="v">crates.io · Homebrew tap · 5-host agent plugins</div></div>
+      <div class="fact"><div class="k">Elsewhere</div><div class="v"><a href="https://github.com/epicsagas">github.com/epicsagas</a> · <a href="https://epiccounty.com">epiccounty.com</a></div></div>
+    </div>
+  </div>
+</section>
 
-  <footer>© 2026 epicsagas · <a href="https://github.com/epicsagas">GitHub</a></footer>
-</div>
+<section id="sites">
+  <h2><b>Research Sites</b> — 서브페이지</h2>
+  <div class="grid">
+    <a class="card wide" href="https://epicsagas.github.io/ontology-explorer/en/">
+      <h3>The Ontology Lineage <span class="tag">ko/en</span></h3>
+      <p>2,300년 온톨로지 연구를 한 정적 페이지로: 아리스토텔레스에서 온톨로지 제약 LLM까지 계보 타임라인, 이론 기초, GraphRAG·지식 엔진 종합, 통합 참조 아키텍처, 5단계 학습 루트, 425편 전체 브라우저. research-agent로 수집·갭 분석 — 초기 조사에서 9개 갭을 찾고 후속 수집으로 8개를 닫았다.</p>
+      <span class="go">epicsagas.github.io/ontology-explorer →</span>
+    </a>
+    <a class="card wide" href="https://epicsagas.github.io/uncanny-writing/">
+      <h3>The Uncanny Valley of AI Writing <span class="tag">ko/en</span></h3>
+      <p>독자는 왜 AI가 쓴 글에서 이탈하는가 — 팩트체크 조사 보고서. 인용 소스 5건 전수 검증(2건 교정), arXiv·OpenAlex 86편 인덱싱, 7개 주제별 증거 지도, 반대 증거, 미해결 갭 4건. "독자는 텍스트가 아니라 라벨과 얕은 휴리스틱으로 판단한다"가 핵심 반전.</p>
+      <span class="go">epicsagas.github.io/uncanny-writing →</span>
+    </a>
+  </div>
+</section>
+
+<section id="projects">
+  <h2><b>Featured Projects</b></h2>
+  <div class="grid">
+    <a class="card" href="https://github.com/epicsagas/research-agent">
+      <h3>research-agent <span class="tag">rust</span></h3>
+      <p>AI 에이전트의 리서치 메모리. arXiv/OpenAlex 논문을 SQLite에 인덱싱하고 LLM 갭 분석으로 빈 곳을 찾아 survey 보고서를 낸다. Rust CLI + 18개 MCP 도구, 5개 호스트 플러그인.</p>
+      <span class="go">GitHub →</span>
+    </a>
+    <a class="card" href="https://github.com/epicsagas/epic-harness">
+      <h3>epic-harness <span class="tag">rust</span></h3>
+      <p>멀티 툴 AI 에이전트 하니스 — 22개 스킬, 자기 진화 엔진, 통합 메모리, spec-to-PR 자동 파이프라인.</p>
+      <span class="go">GitHub →</span>
+    </a>
+    <a class="card" href="https://github.com/epicsagas/alcove">
+      <h3>alcove <span class="tag">rust</span></h3>
+      <p>AI 에이전트용 비공개 문서 서버 — BM25+벡터 하이브리드 검색, tree-sitter 코드 인덱싱, 문서 일관성 정책.</p>
+      <span class="go">GitHub →</span>
+    </a>
+    <a class="card" href="https://github.com/epicsagas/Velith">
+      <h3>Velith <span class="tag">plugin</span></h3>
+      <p>AI 네이티브 출판 시스템 — 빈 페이지에서 EPUB/PDF까지 6단계 파이프라인, 16 스킬·7 에이전트·8 장르 템플릿.</p>
+      <span class="go">GitHub →</span>
+    </a>
+    <a class="card" href="https://github.com/epicsagas/llm-kernel">
+      <h3>llm-kernel <span class="tag">rust</span></h3>
+      <p>AI 네이티브 앱용 Rust 기반 라이브러리 — 16 프로바이더 카탈로그, LLM 클라이언트, MCP 서버, ONNX 임베딩 44종.</p>
+      <span class="go">GitHub →</span>
+    </a>
+    <a class="card" href="https://github.com/epicsagas/opencodex">
+      <h3>opencodex <span class="tag">cli</span></h3>
+      <p>OpenAI Codex와 Claude Code용 범용 프로바이더 프록시 — Claude, Gemini, Grok, DeepSeek, Ollama를 한 CLI 뒤에.</p>
+      <span class="go">GitHub →</span>
+    </a>
+  </div>
+</section>
+
+<section id="tools">
+  <h2><b>More Tools</b></h2>
+  <ul class="tools">
+    <li><b><a href="https://github.com/epicsagas/Episteme">Episteme</a></b> — 소프트웨어 엔지니어링 지식 그래프(패턴·법칙·스멜)</li>
+    <li><b><a href="https://github.com/epicsagas/claudy">claudy</a></b> — 멀티 프로바이더 AI 런처</li>
+    <li><b><a href="https://github.com/epicsagas/llm-transpile">llm-transpile</a></b> — 토큰 예산 적응 압축 문서 변환기</li>
+    <li><b><a href="https://github.com/epicsagas/obsidian-forge">obsidian-forge</a></b> — Obsidian 볼트 생성·자동화·그래프 강화</li>
+    <li><b><a href="https://github.com/epicsagas/plugins">plugins</a></b> — Claude Code 플러그인 마켓플레이스</li>
+    <li><b><a href="https://github.com/epicsagas/homebrew-tap">homebrew-tap</a></b> — 위 CLI 도구들 Homebrew 설치</li>
+    <li><b><a href="https://github.com/epicsagas/epicsagas/blob/master/skills/README.md">Agent Skills</a></b> — 문제 발견·인지 자기분석·교정 루틴 스킬 카탈로그</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="linkrow">
+      <a class="linkbtn" href="https://github.com/epicsagas">GitHub</a>
+      <a class="linkbtn" href="https://epiccounty.com">epiccounty.com</a>
+      <a class="linkbtn" href="https://epicsagas.github.io/llms.txt">llms.txt</a>
+    </div>
+    © 2026 epic (epicsagas) — static page, no build step, no tracking beyond GA4
+  </div>
+</footer>
+
+<script>
+const LINES = [
+  "Platform & Infra Engineer — Seoul",
+  "AI-native developer tooling in Rust",
+  "MCP servers · agent harnesses · research pipelines",
+  "papers in → fact-checked dossiers out"
+];
+const ty = document.getElementById("ty");
+let li = 0, ci = 0, del = false;
+(function tick(){
+  const t = LINES[li];
+  ty.textContent = t.slice(0, ci);
+  if (!del && ci < t.length) { ci++; setTimeout(tick, 55); }
+  else if (!del) { del = true; setTimeout(tick, 1600); }
+  else if (ci > 0) { ci--; setTimeout(tick, 24); }
+  else { del = false; li = (li+1) % LINES.length; setTimeout(tick, 300); }
+})();
+</script>
 </body>
 </html>
