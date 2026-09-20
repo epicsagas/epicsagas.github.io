@@ -21,7 +21,7 @@
 - [alcove](https://github.com/epicsagas/alcove): MCP doc server — BM25 + vector hybrid search, tree-sitter code indexing
 - [Velith](https://github.com/epicsagas/Velith): AI-native publishing — 6-phase book pipeline to EPUB/PDF
 - [llm-kernel](https://github.com/epicsagas/llm-kernel): Rust foundation library — provider catalog, MCP server, ONNX embeddings
-- [opencodex](https://github.com/epicsagas/opencodex): universal provider proxy for OpenAI Codex and Claude Code
+- [Episteme](https://github.com/epicsagas/Episteme): software engineering knowledge graph — design patterns, refactorings, laws, code smells
 
 ## More tools
 
