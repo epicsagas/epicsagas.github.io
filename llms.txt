@@ -25,7 +25,7 @@
 
 ## More tools
 
-- [Episteme](https://github.com/epicsagas/Episteme) (SE knowledge graph), [claudy](https://github.com/epicsagas/claudy) (multi-provider launcher), [llm-transpile](https://github.com/epicsagas/llm-transpile) (token-budget transpiler), [obsidian-forge](https://github.com/epicsagas/obsidian-forge) (vault automation), [plugins](https://github.com/epicsagas/plugins) (Claude Code-only plugin marketplace), [homebrew-tap](https://github.com/epicsagas/homebrew-tap)
+- [claudy](https://github.com/epicsagas/claudy) (multi-provider launcher), [llm-transpile](https://github.com/epicsagas/llm-transpile) (token-budget transpiler), [obsidian-forge](https://github.com/epicsagas/obsidian-forge) (vault automation), [plugins](https://github.com/epicsagas/plugins) (Claude Code-only plugin marketplace), [homebrew-tap](https://github.com/epicsagas/homebrew-tap)
 
 ## Elsewhere
 
